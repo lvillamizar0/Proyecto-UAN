@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+main()
+{
+    int op, clase, op1;
+    cout<<"Bienvenido a mi pagina de reservas de avion "<<endl;
+    do
+    {
+        cout<<"1)Asignar una silla a un pasajero"<<endl;
+        cout<<"2)Consultar una reserva"<<endl;
+        cout<<"3)Eliminar reserva"<<endl;
+        cout<<"4)Buscar pasajero"<<endl;
+        cout<<"5)Calcular el porcentaje de ocupación del avión"<<endl;
+        cout<<"6)Consultar el valor total de ventas por concepto de sillas ocupadas en el avión"<<endl;
+        cout<<"7)Consultar el valor promedio de venta por concepto de sillas ocupadas / pasajero en el avión"<<endl;
+        cout<<"8)salir"<<endl;
+        cin>>op;
+        
+        switch (op)
+        {
+            case 1:
+            {
+                cout<<"Has elegido la opcion Asignar una silla a un pasajero"<<endl;
+                cout<<"las Opciones que tenemos para ti son silla en clase ejecutiva o en clase economica"<<endl;
+                cout<<"Marca 9 para Clase ejecutiva"<<endl;
+                cout<<"Marca 10 para clase economica"<<endl;
+                cin>>op1;
+                switch (op1)
+                {
+                    case 9:
+                    {
+                        cout<<"En clase ejecutiva tienes la opcion de elegir Pasillo o Ventana"<<endl;
+                    }break;
+                 default:
+                    case 10:
+                    {
+                        cout<<"En clase economica tienes la opcion de elegir Pasillo, centro o ventana"<<endl;
+                    }break;}
+                }break;
+            case 2:
+            {
+                cout<<"Has elegido la opcion Consultar una reserva"<<endl;
+            }break;
+            case 3:
+            {
+                cout<<"Has elegido la opcion Eliminar reserva"<<endl;
+            }break;
+            case 4:
+            {
+                cout<<"Has elegido la opcion Buscar pasajero"<<endl;
+            }break;
+            
+            case 5:
+            {
+                cout<<"Has elegido la opcion Calcular el porcentaje de ocupación del avión"<<endl;
+            }break;
+            case 6:
+            {
+                cout<<"Has elegido la opcion Consultar el valor total de ventas por concepto de sillas ocupadas en el avión"<<endl;
+            }break;
+            case 7:
+            {
+                cout<<"Has elegido la opcion Consultar el valor promedio de venta por concepto de sillas ocupadas / pasajero en el avión"<<endl;
+            }break;
+            
+            case 8:
+            {
+                cout<<"Gracias por utilizar nuestro progrma"<<endl;
+            }break;
+            default:
+            {
+                cout<<"Ingresa una opción válida"<<endl;
+            }break;
+            
+        }
+    }while(op!=8);
+}
+
+
+
