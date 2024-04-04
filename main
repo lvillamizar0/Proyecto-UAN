@@ -3,8 +3,9 @@ using namespace std;
 
 main()
 {
-    int op, clase, op1;
+    int op, clase, op1, op2, op3;
     cout<<"Bienvenido a mi pagina de reservas de avion "<<endl;
+    cout<<"A continuacion te presento el menu de opciones que tenemos para ti"<<endl;
     do
     {
         cout<<"1)Asignar una silla a un pasajero"<<endl;
@@ -31,11 +32,46 @@ main()
                     case 9:
                     {
                         cout<<"En clase ejecutiva tienes la opcion de elegir Pasillo o Ventana"<<endl;
+                        cout<<"Marca 11 para Pasillo"<<endl;
+                        cout<<"Marca 12 para Ventana"<<endl;
+                        cin>>op2;
+                        switch (op2)
+                        {
+                            case 11:
+                            {
+                                cout<<"Elegiste la opcion Pasillo en clase ejecutiva"<<endl;
+                            }break;
+                        default:
+                            case 12:
+                            {
+                                cout<<"Elegiste la opcion Ventana en clase ejecutiva"<<endl;
+                            }break;
+                        }
                     }break;
                  default:
                     case 10:
                     {
                         cout<<"En clase economica tienes la opcion de elegir Pasillo, centro o ventana"<<endl;
+                        cout<<"Marca 13 para Pasillo"<<endl;
+                        cout<<"Marca 14 para centro"<<endl;
+                        cout<<"Marca 15 para Ventana"<<endl;
+                        cin>>op3;
+                        switch (op3)
+                        {
+                            case 13:
+                            {
+                                cout<<"Elegiste la opcion Pasillo en clase economica"<<endl;
+                            }break;
+                        default:
+                            case 14:
+                            {
+                                cout<<"Elegiste la opcion Centro en clase economica"<<endl;
+                            }break;
+                            case 15:
+                            {
+                                cout<<"Elegiste la opcion Ventana en clase economica"<<endl;
+                            }break;
+                        }
                     }break;}
                 }break;
             case 2:
@@ -76,6 +112,3 @@ main()
         }
     }while(op!=8);
 }
-
-
-
