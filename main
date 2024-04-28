@@ -3,9 +3,19 @@ using namespace std;
 
 main()
 {
-    int op, clase, op1, op2, op3;
+    int x=1, a=15, b=29, c=43, d=47;
+    int op, clase, op_1, op__1, op___1,op____1;
+    int op_2,op__2,cedula,CC;
+    char Reserva_clase [50];
+    char Reserva_silla [50];
+    
     cout<<"Bienvenido a mi pagina de reservas de avion "<<endl;
+
+    cout<<"Escribe tu cedula"<<endl;
+    cin>>cedula;
+    
     cout<<"A continuacion te presento el menu de opciones que tenemos para ti"<<endl;
+    
     do
     {
         cout<<"1)Asignar una silla a un pasajero"<<endl;
@@ -24,81 +34,166 @@ main()
             {
                 cout<<"Has elegido la opcion Asignar una silla a un pasajero"<<endl;
                 cout<<"las Opciones que tenemos para ti son silla en clase ejecutiva o en clase economica"<<endl;
-                cout<<"Marca 9 para Clase ejecutiva"<<endl;
-                cout<<"Marca 10 para clase economica"<<endl;
-                cin>>op1;
-                switch (op1)
+                cout<<"Marca 1 para Clase economica"<<endl;
+                  cout<<"Marca 2 para clase ejecutiva"<<endl;
+                cin>>op_1;
+            switch (op_1)
                 {
-                    case 9:
+                    case 1:
                     {
-                        cout<<"En clase ejecutiva tienes la opcion de elegir Pasillo o Ventana"<<endl;
-                        cout<<"Marca 11 para Pasillo"<<endl;
-                        cout<<"Marca 12 para Ventana"<<endl;
-                        cin>>op2;
-                        switch (op2)
+                            cout<<"En clase economica tienes la opcion de elegir Pasillo o Ventana"<<endl;
+                            cout<<"Marca 1 para Pasillo"<<endl;
+                            cout<<"Marca 2 para centro"<<endl;                           
+                            cout<<"Marca 3 para Ventana"<<endl;
+                            cin>>op__1;
+                        switch (op__1)
                         {
-                            case 11:
+                            case 1:
                             {
-                                cout<<"Elegiste la opcion Pasillo en clase ejecutiva"<<endl;
+                                cout<<"Elegiste la opcion Pasillo en clase economica"<<endl<<"\n\n";
+                                cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
+                                    while (x<=14)
+                                    {
+                                        cout<<x<<endl;
+                                        x = x+1;
+                                    };
                             }break;
-                        default:
-                            case 12:
+                            case 2:
+                                {
+                                    cout<<"Elegiste la opcion Centro en clase economica"<<endl<<"\n\n";
+                                    cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
+                                    while (a<=28)
+                                    {
+                                        cout<<a<<endl;
+                                        a = a+1;
+                                    };
+                                }break;
+                            
+                            case 3:
                             {
-                                cout<<"Elegiste la opcion Ventana en clase ejecutiva"<<endl;
+                                cout<<"Elegiste la opcion Ventana en clase economica"<<endl<<"\n\n";
+                                cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
+                                    while (b<=42)
+                                    {
+                                        cout<<b<<endl;
+                                        b = b+1;
+                                    };
                             }break;
                         }
                     }break;
-                 default:
-                    case 10:
-                    {
-                        cout<<"En clase economica tienes la opcion de elegir Pasillo, centro o ventana"<<endl;
-                        cout<<"Marca 13 para Pasillo"<<endl;
-                        cout<<"Marca 14 para centro"<<endl;
-                        cout<<"Marca 15 para Ventana"<<endl;
-                        cin>>op3;
-                        switch (op3)
+                    
+                            case 2:
                         {
-                            case 13:
+                            cout<<"En clase ejecutiva tienes la opcion de elegir Pasillo o ventana"<<endl;
+                            cout<<"Marca 1 para Pasillo"<<endl;
+                            cout<<"Marca 2 para Ventana"<<endl;
+                            cin>>op___1;
+                        switch (op___1)
                             {
-                                cout<<"Elegiste la opcion Pasillo en clase economica"<<endl;
-                            }break;
-                        default:
-                            case 14:
-                            {
-                                cout<<"Elegiste la opcion Centro en clase economica"<<endl;
-                            }break;
-                            case 15:
-                            {
-                                cout<<"Elegiste la opcion Ventana en clase economica"<<endl;
-                            }break;
-                        }
-                    }break;}
-                }break;
-            case 2:
-            {
-                cout<<"Has elegido la opcion Consultar una reserva"<<endl;
-            }break;
+                                case 1:
+                                {
+                                    cout<<"Elegiste la opcion Pasillo en clase ejecutiva"<<endl<<"\n\n";
+                                    cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
+                                        while (c<=46)
+                                    {
+                                        cout<<c<<endl;
+                                        c = c+1;
+                                    };
+                                }break;
+                                case 2:
+                                {
+                                    cout<<"Elegiste la opcion Ventana en clase ejecutiva"<<endl<<"\n\n";
+                                    cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
+                                        while (d<=50)
+                                    {
+                                        cout<<d<<endl;
+                                        d = d+1;
+                                    };
+                                }break;
+                            }
+                        }break;}
+                    }break;
+                    
+                
+                
+               
+             case 2:
+               {
+                        cout<<"Has elegido la opcion Consultar una reserva"<<endl;
+                       cout<<"ingresa tu numero de cedula para consultar la reserva "<<endl;
+                       cin>> CC;
+                       
+                       if(cedula==CC)
+                       {    
+                           cout<<"Su resvervas es"<<endl<<"\n\n";//Hacer que muestre en pantalla las variables del switch, es decir, op_1 con la forma <<op_1;
+                       }else
+                           {
+                                cout<<"Has elegido la opcion Eliminar una reserva"<<endl;
+                                cout<<"ingresa tu numero de cedula para Eliminar la reserva "<<endl;// solo se repite 2 veces no se repite hasta que cumpla la condicion (if)
+                                cin>> CC;
+                           }
+                }
+                 break;
+                    
             case 3:
             {
-                cout<<"Has elegido la opcion Eliminar reserva"<<endl;
-            }break;
+                
+                        cout<<"Has elegido la opcion Eliminar una reserva"<<endl;
+                       cout<<"ingresa tu numero de cedula para Eliminar la reserva "<<endl;// solo se repite 2 veces no se repite hasta que cumpla la condicion (if)
+                       cin>> CC;
+                       
+                       if(cedula==CC)
+                       {    
+                           cout<<"Su resverva a sido eliminada"<<endl<<"\n\n";
+                           return (0);
+                       }else
+                           {
+                                cout<<"Has elegido la opcion Eliminar una reserva"<<endl;
+                                cout<<"ingresa tu numero de cedula para Eliminar la reserva "<<endl;
+                                cin>> CC;
+                           }
+              }break;
+              
+              
+              
+              
             case 4:
             {
                 cout<<"Has elegido la opcion Buscar pasajero"<<endl;
             }break;
             
+            
+            
+            
+            
+            
             case 5:
             {
                 cout<<"Has elegido la opcion Calcular el porcentaje de ocupación del avión"<<endl;
             }break;
+            
+            
+            
+            
+            
+            
             case 6:
             {
                 cout<<"Has elegido la opcion Consultar el valor total de ventas por concepto de sillas ocupadas en el avión"<<endl;
             }break;
+            
+            
+            
+            
+            
+            
             case 7:
             {
                 cout<<"Has elegido la opcion Consultar el valor promedio de venta por concepto de sillas ocupadas / pasajero en el avión"<<endl;
             }break;
+            
+            
+            
             
             case 8:
             {
@@ -112,3 +207,5 @@ main()
         }
     }while(op!=8);
 }
+
+
