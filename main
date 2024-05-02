@@ -3,7 +3,8 @@ using namespace std;
 
 main()
 {
-    int x=1, a=15, b=29, c=43, d=47;
+    int x[14], a[28], b[42], c[46], d[50];
+    int s, v, n, m, o;
     int op, clase, op_1, op__1, op___1,op____1;
     int op_2,op__2,cedula,CC;
     char Reserva_clase [50];
@@ -52,32 +53,41 @@ main()
                             {
                                 cout<<"Elegiste la opcion Pasillo en clase economica"<<endl<<"\n\n";
                                 cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
-                                    while (x<=14)
+                                    cout << 14<<endl;
+                                    for (int i=0; i<14; i++)
                                     {
-                                        cout<<x<<endl;
-                                        x = x+1;
+                                        x[i]=0;
+                                        cout<<i+1<<endl;
                                     };
+                                    cin>>s;
+                                    x[s-1]=1;
                             }break;
                             case 2:
                                 {
                                     cout<<"Elegiste la opcion Centro en clase economica"<<endl<<"\n\n";
                                     cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
-                                    while (a<=28)
+                                   cout << 28<<endl;
+                                    for (int j=13; j<28; j++)
                                     {
-                                        cout<<a<<endl;
-                                        a = a+1;
+                                        a[j]=0;
+                                        cout<<j+1<<endl;
                                     };
+                                    cin>>v;
+                                    a[v-1]=1;
                                 }break;
                             
                             case 3:
                             {
                                 cout<<"Elegiste la opcion Ventana en clase economica"<<endl<<"\n\n";
                                 cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
-                                    while (b<=42)
+                                    cout << 42<<endl;
+                                    for (int l=28; l<42; l++)
                                     {
-                                        cout<<b<<endl;
-                                        b = b+1;
+                                        b[l]=0;
+                                        cout<<l+1<<endl;
                                     };
+                                    cin>>n;
+                                    b[n-1]=1;
                             }break;
                         }
                     }break;
@@ -94,21 +104,27 @@ main()
                                 {
                                     cout<<"Elegiste la opcion Pasillo en clase ejecutiva"<<endl<<"\n\n";
                                     cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
-                                        while (c<=46)
+                                        cout << 50<<endl;
+                                    for (int k=42; k<50; k++)
                                     {
-                                        cout<<c<<endl;
-                                        c = c+1;
+                                        c[k]=0;
+                                        cout<<k+1<<endl;
                                     };
+                                    cin>>m;
+                                    c[m-1]=1;
                                 }break;
                                 case 2:
                                 {
                                     cout<<"Elegiste la opcion Ventana en clase ejecutiva"<<endl<<"\n\n";
                                     cout<<"Tenemos las siguientes sillas disponibles para ti:"<<endl;
-                                        while (d<=50)
+                                       cout << 50<<endl;
+                                    for (int p=50; p<58; p++)
                                     {
-                                        cout<<d<<endl;
-                                        d = d+1;
+                                        d[p]=0;
+                                        cout<<p+1<<endl;
                                     };
+                                    cin>>o;
+                                    d[o-1]=1;
                                 }break;
                             }
                         }break;}
