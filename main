@@ -3,26 +3,28 @@ using namespace std;
 
 main()
 {
-    estruc{
-        int cc;
-        int reserva;
-    }
+    struct pasajero{
+        int ccpasajero;
+        int reservapasajero=51;
+    };
     //int x[14], a[28], b[42], c[46], d[50];
-    int reserva,x;
+    int reserva,x,pos=0;
     int op, clase, op_1, op__1, op___1,op____1;
-    int op_2,op__2,cedula,CC;
+    int op_2,op__2,CC;
     //bool Reserva_clase [50];
+    pasajero lista[50];
     bool Reserva_silla [50];
     
     cout<<"Bienvenido a mi pagina de reservas de avion "<<endl;
 
+   
+    do
+    {
     cout<<"Escribe tu cedula"<<endl;
-    cin>>cedula;
+    cin>>lista[pos].ccpasajero;
     
     cout<<"A continuacion te presento el menu de opciones que tenemos para ti"<<endl;
     
-    do
-    {
         cout<<"1)Asignar una silla a un pasajero"<<endl;
         cout<<"2)Consultar una reserva"<<endl;
         cout<<"3)Eliminar reserva"<<endl;
@@ -69,17 +71,18 @@ main()
                                     x=0;
                                     while(x==0){
                                     cout<<"Selecciona una de las sillas disponibles:"<<endl;
-                                    cin>>reserva;
-                                    reserva--;
+                                    cin>>lista[pos].reservapasajero;
+                                    lista[pos].reservapasajero--;
                                         for (int i=0; i<14; i++)
                                         {
                                         
-                                            if(reserva==i){
+                                            if(lista[pos].reservapasajero==i){
                                                 if(Reserva_silla[i]==0)
                                                 {
                                                     Reserva_silla[i]=1;
                                                     x=1;
                                                     cout<<"Su silla a sido asignada"<<endl;
+                                                    pos++;
                                                 }else{
                                                 cout<<"Esa silla esta ocupada, selecciona una que no lo este"<<endl;
                                                 }
@@ -102,17 +105,18 @@ main()
                                     x=0;
                                     while(x==0){
                                     cout<<"Selecciona una de las sillas disponibles:"<<endl;
-                                    cin>>reserva;
-                                    reserva--;
-                                        for (int i=13; i<28; i++)
+                                    cin>>lista[pos].reservapasajero;
+                                    lista[pos].reservapasajero--;
+                                        for (int i=0; i<14; i++)
                                         {
                                         
-                                            if(reserva==i){
+                                            if(lista[pos].reservapasajero==i){
                                                 if(Reserva_silla[i]==0)
                                                 {
                                                     Reserva_silla[i]=1;
                                                     x=1;
                                                     cout<<"Su silla a sido asignada"<<endl;
+                                                    pos++;
                                                 }else{
                                                 cout<<"Esa silla esta ocupada, selecciona una que no lo este"<<endl;
                                                 }
@@ -133,20 +137,21 @@ main()
                                         cout<<i+1<<endl;
                                         }
                                     }
-                                    x=0;
+                                   x=0;
                                     while(x==0){
                                     cout<<"Selecciona una de las sillas disponibles:"<<endl;
-                                    cin>>reserva;
-                                    reserva--;
-                                        for (int i=28; i<42; i++)
+                                    cin>>lista[pos].reservapasajero;
+                                    lista[pos].reservapasajero--;
+                                        for (int i=0; i<14; i++)
                                         {
                                         
-                                            if(reserva==i){
+                                            if(lista[pos].reservapasajero==i){
                                                 if(Reserva_silla[i]==0)
                                                 {
                                                     Reserva_silla[i]=1;
                                                     x=1;
                                                     cout<<"Su silla a sido asignada"<<endl;
+                                                    pos++;
                                                 }else{
                                                 cout<<"Esa silla esta ocupada, selecciona una que no lo este"<<endl;
                                                 }
@@ -180,17 +185,18 @@ main()
                                     x=0;
                                     while(x==0){
                                     cout<<"Selecciona una de las sillas disponibles:"<<endl;
-                                    cin>>reserva;
-                                    reserva--;
-                                        for (int i=42; i<46; i++)
+                                    cin>>lista[pos].reservapasajero;
+                                    lista[pos].reservapasajero--;
+                                        for (int i=0; i<14; i++)
                                         {
                                         
-                                            if(reserva==i){
+                                            if(lista[pos].reservapasajero==i){
                                                 if(Reserva_silla[i]==0)
                                                 {
                                                     Reserva_silla[i]=1;
                                                     x=1;
                                                     cout<<"Su silla a sido asignada"<<endl;
+                                                    pos++;
                                                 }else{
                                                 cout<<"Esa silla esta ocupada, selecciona una que no lo este"<<endl;
                                                 }
@@ -213,17 +219,18 @@ main()
                                     x=0;
                                     while(x==0){
                                     cout<<"Selecciona una de las sillas disponibles:"<<endl;
-                                    cin>>reserva;
-                                    reserva--;
+                                    cin>>lista[pos].reservapasajero;
+                                    lista[pos].reservapasajero--;
                                         for (int i=46; i<50; i++)
                                         {
                                         
-                                            if(reserva==i){
+                                            if(lista[pos].reservapasajero==i){
                                                 if(Reserva_silla[i]==0)
                                                 {
                                                     Reserva_silla[i]=1;
                                                     x=1;
                                                     cout<<"Su silla a sido asignada"<<endl;
+                                                    pos++;
                                                 }else{
                                                 cout<<"Esa silla esta ocupada, selecciona una que no lo este"<<endl;
                                                 }
@@ -241,41 +248,58 @@ main()
                 
                
              case 2:
-               {
-                        cout<<"Has elegido la opcion Consultar una reserva"<<endl;
-                       cout<<"ingresa tu numero de cedula para consultar la reserva "<<endl;
-                       cin>> CC;
-                       
-                       if(cedula==CC)
-                       {    
-                           cout<<"Su resvervas es"<<endl<<"\n\n";//Hacer que muestre en pantalla las variables del switch, es decir, op_1 con la forma <<op_1;
-                       }else
-                           {
-                                cout<<"Has elegido la opcion Eliminar una reserva"<<endl;
-                                cout<<"ingresa tu numero de cedula para Eliminar la reserva "<<endl;// solo se repite 2 veces no se repite hasta que cumpla la condicion (if)
-                                cin>> CC;
-                           }
-                }
-                 break;
+{
+    cout << "Has elegido la opcion Consultar una reserva" << endl;
+    cout << "Ingresa tu numero de cedula para consultar la reserva " << endl;
+    cin >> CC;
+
+    for (int i = 0; i < 50; i++)
+    {
+        cout << "Su reserva es" << endl << "\n\n"; // Hacer que muestre en pantalla las variables del switch, es decir, op_1 con la forma <<op_1;
+        if (lista[i].ccpasajero == CC)
+        {
+            if (lista[i].reservapasajero < 50)
+            {
+                cout << lista[i].ccpasajero << endl;
+                cout << (lista[i].reservapasajero + 1) << endl;
+                break; // Salir del bucle una vez que se encuentra la reserva
+            }
+            else
+            {
+                cout << "No hay reserva" << endl;
+            }
+        }
+    }
+}
+break;
+
                     
             case 3:
-            {
-                
-                        cout<<"Has elegido la opcion Eliminar una reserva"<<endl;
-                       cout<<"ingresa tu numero de cedula para Eliminar la reserva "<<endl;// solo se repite 2 veces no se repite hasta que cumpla la condicion (if)
-                       cin>> CC;
-                       
-                       if(cedula==CC)
-                       {    
-                           cout<<"Su resverva a sido eliminada"<<endl<<"\n\n";
-                           return (0);
-                       }else
-                           {
-                                cout<<"Has elegido la opcion Eliminar una reserva"<<endl;
-                                cout<<"ingresa tu numero de cedula para Eliminar la reserva "<<endl;
-                                cin>> CC;
-                           }
-              }break;
+{
+    cout << "Has elegido la opcion Eliminar una reserva" << endl;
+    cout << "Ingresa tu numero de cedula para Eliminar la reserva " << endl;
+    cin >> CC;
+    bool reservaEncontrada = false; // Variable para controlar si se encontró la reserva
+
+    for (int i = 0; i < 50; i++)
+    {
+        if (lista[i].ccpasajero == CC)
+        {
+            cout << "Su reserva ha sido eliminada" << endl << "\n\n";
+            // Eliminar la reserva asignando un valor de reserva no válido
+            lista[i].reservapasajero = 51;
+            reservaEncontrada = true;
+            break; // Salir del bucle una vez que se elimina la reserva
+        }
+    }
+
+    if (!reservaEncontrada)
+    {
+        cout << "No se encontró ninguna reserva asociada a esa cedula" << endl;
+    }
+}
+break;
+
               
               
               
@@ -330,3 +354,4 @@ main()
         }
     }while(op!=8);
 }
+
